@@ -1,11 +1,6 @@
 {
-  "name": "Testing_Hackathon",
-  "short_name": "WMN",
-  "theme_color": "#008eff",
-  "background_color": "#b5b6b6",
-  "display": "standalone",
-  "Scope": "/",
-  "start_url": "/index.html",
+  "short_name": "Chat",
+  "name": "Chat",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
@@ -48,5 +43,9 @@
       "type": "image/png"
     }
   ],
+  "start_url": "/index.html",
+  "background_color": "#e05a47",
+  "theme_color": "#e05a47",
+  "display": "standalone",
   "splash_pages": null
 }
