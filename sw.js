@@ -1,6 +1,7 @@
 'use strict';
 
 self.importScripts(
+    "index.html",
     "app.js",
     "install.js",
 );
