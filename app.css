@@ -3,6 +3,12 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+.add-button {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
 .animate-in {
   animation: fade-slide 1.5s forwards;
 }
