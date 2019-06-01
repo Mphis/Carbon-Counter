@@ -52,9 +52,4 @@ function animate() {
     button.classList.add('animate-in');
   }, 13500);
   
-   setTimeout(function () {
-    button.classList.add('animate-in');
-  }, 15000);
-}
-
 animate();
