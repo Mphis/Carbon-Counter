@@ -58,7 +58,3 @@ function animate() {
 }
 
 animate();
-
-button.addEventListener('click', function() {
-  animate();
-});
