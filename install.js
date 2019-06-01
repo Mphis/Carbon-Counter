@@ -1,28 +1,29 @@
-// CODELAB: Add event listener for beforeinstallprompt event
-window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 
-// CODELAB: Add code to save event & show the install button.
-deferredInstallPrompt = evt;
-installButton.removeAttribute('hidden');
+var deferredPrompt;
 
-// CODELAB: Add code show install prompt & hide the install button.
-deferredInstallPrompt.prompt();
-// Hide the install button, it can't be called twice.
-evt.srcElement.setAttribute('hidden', true);
+window.addEventListener('beforeinstallprompt', function (e) {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
 
-// CODELAB: Log user response to prompt.
-deferredInstallPrompt.userChoice
-    .then((choice) => {
-      if (choice.outcome === 'accepted') {
-        console.log('User accepted the A2HS prompt', choice);
-      } else {
-        console.log('User dismissed the A2HS prompt', choice);
-      }
-      deferredInstallPrompt = null;
-    });
-    
- // CODELAB: Add event listener for appinstalled event
-window.addEventListener('appinstalled', logAppInstalled);
+  showAddToHomeScreen();
 
-// CODELAB: Add code to log the event
-console.log('Weather App was installed.', evt);
+});
+
+
+function addToHomeScreen() {  var a2hsBtn = document.querySelector(".ad2hs-prompt");  // hide our user interface that shows our A2HS button
+  a2hsBtn.style.display = 'none';  // Show the prompt
+  deferredPrompt.prompt();  // Wait for the user to respond to the prompt
+  deferredPrompt.userChoice
+    .then(function(choiceResult){
+
+  if (choiceResult.outcome === 'accepted') {
+    console.log('User accepted the A2HS prompt');
+  } else {
+    console.log('User dismissed the A2HS prompt');
+  }
+
+  deferredPrompt = null;
+
+});}
