@@ -1,7 +1,6 @@
 'use strict';
 
 self.importScripts(
-    "install.js",
 );
 
 const version = "1.03",
