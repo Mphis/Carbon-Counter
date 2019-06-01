@@ -4,13 +4,11 @@
 <link rel="manifest" href="/manifest.json">
 
 <script>
-// CODELAB: Register service worker.
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-        .then((reg) => {
-          console.log('Service worker registered.', reg);
-        });
-  });
-}
+if ('serviceWorker' in navigato window.addEventListener('load', navigator.serviceWorker.registe // Registration was successful console.log('Registered!');
+}, function(err) {
+// registration failed :( console.log('ServiceWorker regi }).catch(function(err) { console.log(err);
+});
+});
+} else {
+console.log('service worker is }
 </script>
