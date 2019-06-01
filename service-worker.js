@@ -1,3 +1,14 @@
+
+self.addEventListener('install', function() {
+  console.log('Install!');
+});
+self.addEventListener("activate", event => {
+  console.log('Activate!');
+});
+self.addEventListener('fetch', function(event) {
+  console.log('Fetch!', event.request);
+});
+
 //Update cache names any time any of the cached files change.
 const FILES_TO_CACHE = [
     '/offline.html',
@@ -39,5 +50,3 @@ if (evt.request.mode !== 'navigate') {
                 });
           })
   );
-
-  
