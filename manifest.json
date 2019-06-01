@@ -1,0 +1,17 @@
+{
+  "name": "Testing_Hackathon",
+  "short_name": "WMN",
+  "theme_color": "#008eff",
+  "background_color": "#b5b6b6",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "images/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
