@@ -8,6 +8,7 @@ navigator.serviceWorker.register('sw.js').then(function(reg) {
   console.log('ಠ_ಠ', err);
 });
 
+
 function animate() {
   title.classList.remove('animate-in');
   for (var i = 0; i < courseFeatureElements.length; i++) {
