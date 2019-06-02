@@ -53,3 +53,4 @@ function animate() {
   }, 13500);
   
 animate();
+}
