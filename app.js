@@ -10,6 +10,7 @@ navigator.serviceWorker.register('sw.js').then(function(reg) {
 
 
 function animate() {
+  
   title.classList.remove('animate-in');
   for (var i = 0; i < courseFeatureElements.length; i++) {
     courseFeatureElements[i].classList.remove('animate-in');
