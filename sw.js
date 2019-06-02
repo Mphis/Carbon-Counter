@@ -1,5 +1,4 @@
-self.importScripts(
-);
+
 
 const version = "1.03",
     preCache = "PRECACHE-" + version,
